@@ -2,7 +2,7 @@
 
 print("Vamos Começar? Quero ver se você é bom em matemática! Vou te dar três chances.")
 chance = 0
-while chance <= 3:
+while chance < 3:
 
     try:
         print("""Atenção à pergunta:
