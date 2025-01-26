@@ -4,7 +4,7 @@ print("Vamos Começar? Quero ver se você é bom em matemática! Vou te dar trê
 chance = 0
 pontos = 0
 while chance < 3:
-    perguntas = ['Qual é a soma de 37 + 26?', 'Qual é o resultado de  13 X 17?', 'Quanto é 56 - 18?']
+    perguntas = ['1 - Qual é a soma de 37 + 26?', '2 - Qual é o resultado de  13 X 17?', '3 - Quanto é 56 - 18?']
     respostas = ["63" , "221" , "38"]
     if pontos == (len(perguntas)*10):
         print(f"Parabéns!! Acertou todas as perguntas e fez {pontos}!!")
@@ -22,6 +22,21 @@ while chance < 3:
             break
         else:
             pontos += 10
-            
+
 if chance >= 3:
     print("Que pena! Precisamos revisar os estudos!")
+    try:
+        revisarQuestao = "s"
+        questao = 0
+        while revisarQuestao == "s":
+            revisarQuestao = input("Quer saber a resposta de alguma questão? s/n? ")
+            if revisarQuestao == "s":
+                questao = int(input("Informe o número da questão: ")) -1
+                for i in perguntas:
+                    if i == perguntas[questao]:
+                        print(perguntas[questao] + " : " + respostas[questao])
+            else:
+                print("Até a próxima!!")
+    except:
+        print("Não entendi! Mas você pode começar novamente! Boa sorte!")
+            
